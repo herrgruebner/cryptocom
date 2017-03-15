@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+<script src="~/signalr/hubs"></script>
+<script src="~/Scripts/signalr.js"></script>
+
+<div class="row">
+    <div class="col-lg-6">
+        <h2 class="right-align">Send Text</h2>
+        <textarea id="sendText" type="text" class="form-control" ></textarea>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="col-lg-12">
+            <h2>Name</h2>
+            <input id="name" class="form-control" />
+        </div>
+        <br />
+        <div class="col-lg-12">
+            <div id="sendbutton" class="btn btn-default">Send Message</div>
+        </div>
+        
+    </div>
+    <div class="col-lg-3">
+        <div>
+            <h3>Send Cipher Remaining</h3>
+            <div id="sendcipherremaining"></div>
+        </div>
+        <div>
+            <h3>Receive Cipher Remaining</h3>
+            <div id="receivecipherremaining"></div>
+        </div>
+    </div>
+</div>
+<div id="received" class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="right-align">Name</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody id="receivedbody">
+
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <div class="col-lg-6" style="text-align:right">
+        <h2>Send cipher</h2>
+        <textarea id="sendCipher" type="text" class="form-control" style="float:right"></textarea>
+    </div>
+    <div class="col-lg-6">
+        <h2>Receive cipher</h2>
+        <textarea id="receiveCipher" type="text" class="form-control" style="width:100%"></textarea>
+    </div>
+</div>

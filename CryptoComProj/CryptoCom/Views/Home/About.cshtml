@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>CryptoCom is an experiment with SignalR that provides secure one time pad based encryption</p>
+
+<p>Messages are XORed client side with the chosen cipher text, transmitted, and decoded client side.</p>
+
+<p>While secure, this has the obvious disadvantage that both parties have to agree on a cipher texxt before hand.</p>
+
+<h3>Instructions</h3>
+
+<p>Enter the agreed upon ciphertexts into the send cipher and receive cipher boxes. Your send must match the recipient's receive and vice versa.</p>
+
+<p>This means two different ciphertexts can (and should) be used to prevent the cipher from being broken.</p>
+
+<p>When you put a message into the send box and send it, it will take the message's length worth of characters from your send cipher.</p>
+
+<p>It will then perform a bitwise XOR on the message using the cipher, and send it to the server.</p>
+
+<p>The server will then send it to the other connected clients.</p>
+
+<p>The other connected client will take the corresponding number of characters out of their receive cipher.</p>
